@@ -28,28 +28,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Obrót" />
+                android:text="Obrót"
+                android:onClick="obracaj" />
 
             <Button
                 android:id="@+id/btnSkala"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Skaluj" />
+                android:text="Skaluj"
+                android:onClick="skaluj"/>
 
             <Button
                 android:id="@+id/btnZanik"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Zanikaj" />
+                android:text="Zanikaj"
+                android:onClick="zanikaj"/>
 
             <Button
                 android:id="@+id/btnPrzsuw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Przesuń" />
+                android:text="Przesuń"
+                android:onClick="przesuwaj"/>
 
         </LinearLayout>
 
@@ -58,7 +62,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="WSZYSTKO" />
+            android:text="WSZYSTKO"
+            android:onClick="stosuj_wszystko"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
