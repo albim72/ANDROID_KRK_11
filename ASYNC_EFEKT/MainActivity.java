@@ -75,7 +75,32 @@ public class MainActivity extends AppCompatActivity {
             c.drawRect(0,0,szer-1,wys-1,p);
             return null;
         }
-        
-        
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            
+            stan.setVisibility(ProgressBar.VISIBLE);
+            przycisk.setEnabled(false);
+        }
+
+        @Override
+        protected void onPostExecute(Void unused) {
+            super.onPostExecute(unused);
+            
+            obraz.setImageBitmap(bmp);
+            przycisk.setEnabled(true);
+            stan.setVisibility(ProgressBar.INVISIBLE);
+            napis.setText("koniec przetwarzania obrazu...");
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+            
+            napis.setText("Stan: " + nr + "/" + ile);
+            if(nr%1000 == 0)
+                obraz.setImageBitmap(bmp);
+        }
     }
 }
