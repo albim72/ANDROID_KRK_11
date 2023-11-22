@@ -1,0 +1,1 @@
+final String strJSON = "{ \"Android\":[{\"song_name\":\"piosenka 1\",\"song_id\":\"67\",\"artist_name\":\"artysta 1\"},{\"song_name\":\"piosenka 2\",\"song_id\":\"88\",\"artist_name\":\"artysta 2\"}]}";
